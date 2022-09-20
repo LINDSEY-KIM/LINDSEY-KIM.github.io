@@ -4,80 +4,376 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>PORTFOLIO</title>
     <style>
-        *{margin: 0; padding: 0; box-sizing: border-box;}
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+
+        a {text-decoration: none; color: #fff;}
+        
         body {
-            background: #000;
+            transition: 1s;
+            font-family: 'Noto Sans', sans-serif;
         }
+
         .wrap {
-            margin: 300px auto;
-            width: 700px;
+            position: relative;
+            max-width: 1920px;
+            margin: 200px auto;
+            margin-bottom: 0;
+            padding: 0 150px;
+        }
+
+        .main {
+            display: flex;
+            width: 100%;
+            margin-bottom: 150px;
+        }
+
+        .main .left {
+            width: 30%;
+        }
+
+        .main .right {
+            width: 70%;
+        }
+
+        .icon_box {
+            width: 120px;
+            position: relative;
+        }
+
+        .icon_box .stick {
+            position: absolute;
+            width: 7px;
+            height: 100px;
+            background-color: #fff;    
+            opacity: 0;
+            transition: .1s;      
+        }
+
+        .main .txt_box {
+            position: relative;
+            padding-left: 10%;
+            top: 75%;
+        }
+
+        .txt_box h6 {
+            font-size: 23px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .txt_box p {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .tri_txt {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 150px;
+        }
+
+        .tri_box {
+            width: 15%;
+        }
+
+        .main_txt {
+            position: relative;
+        }
+
+        .main_txt h3 {
+            position: relative;
+            left: -20px;
+            font-weight: 700;
+            font-size: 250px;
+            line-height: 250px;
+            margin-right: -10%;
+        }
+
+        /* main end */
+
+        .con {
+            position: relative;
+            padding-left: 100px;
+            top: 0; left: 0;
+            margin: 300px 0;
+        }
+
+        .con_2 .txt_con, .con_4 .txt_con, .con_6 .txt_con {
+            margin-left: 0;
+            margin-right: -20px;
+        }
+
+        .con a {
             display: flex;
         }
-        h1 {
-            width: 400px;
-            margin: auto;
-            font-size: 40px;
-            color: #fff;
+
+        .con .img_con {
+            width: 1000px;
+            height: 525px;
+            transition: .3s;
         }
-        .box {
-            width: 200px;
+
+        .img_con img {
+            width: 100%;
+        }
+
+        .con .img_con:hover {
+            transform: scale(1.05);
+        }
+
+        .con .txt_con {
+            margin-left: -20px;
             display: flex;
             flex-direction: column;
+            justify-content: end;
+            margin-left: -20px;
+            margin-bottom: -20px;
+            transition: .3s;
+            z-index: 1;
+            text-shadow: 0px 0px 2px #999;
         }
-        a {
-            display: block;
-            width: 200px;
-            height: 60px;
-            text-decoration: none;
-            font-size: 20px;
-            color: #fff;
-            border: 1px solid #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .non {
-            visibility: hidden;
-        }
-        a:hover {
-            background-color: #fff;
+
+        .con .txt_con:hover {
             color: #000;
+            text-shadow: 0 0 #fff;
         }
 
-        @media screen and (max-width: 500px) {
-            .wrap {
-                width: unset;
-                margin: 120px auto;
-                flex-direction: column;
-                align-items: center;
-            }
+        .txt_con h4 {
+            font-size: 100px;
+            font-weight: 700;
+        }
 
-            h1 {
-                text-align: center;
-                margin-bottom: 100px;
-            }
+        .txt_con p {
+            font-size: 50px;
+            font-weight: 500;
+        }
+
+        .tag {
+            font-size: 20px;
+            transform: rotate(90deg);
+        }
+
+        /* con end */
+
+        footer {
+            border-top: 2px solid #fff;
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .opacity {
+            opacity: 1;
         }
     </style>
 </head>
 <body>
 
     <div class="wrap">
-        <h1>PORTFOLIO 2022</h1>
-        <div class="box">
-            <a href="./01_sfu/login.html">SFU</a>
-            <a class="non" href="#" ></a>
-            <a href="./02_JAJU/index.html">JAJU</a>
-            <a href="./03_kick the hurdle/index.html">Kick the hurdle</a>
+        
+        <div class="main">
+            <div class="left">
+                <div class="icon_box">
+                    <div class="stick"></div>
+                    <div class="stick" style="transform: rotate(22.5deg); top: 10px; left: 40px"></div>
+                    <div class="stick" style="transform: rotate(45deg); top: 35px; left: 72px"></div>
+                    <div class="stick" style="transform: rotate(67.5deg); top: 65px; left: 90px;"></div>
+                    <div class="stick" style="transform: rotate(90deg); top: 100px; left: 98px;" ></div>
+                    <div class="stick" style="transform: rotate(112.5deg); top: 135px; left: 90px;"></div>
+                    <div class="stick" style="transform: rotate(135deg); top: 165px; left: 72px;"></div>
+                    <div class="stick" style="transform: rotate(157.5deg); top: 190px; left: 40px;"></div>
+                    <div class="stick gage" style="top: 200px;  "></div>
+                </div>
+                <div class="txt_box">
+                    <h6>2022 Project</h6>
+                    <p>Contact.</p>
+                    <p>010 8696 9388</p>
+                    <p>ksfam02@naver.com</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="tri_txt">
+                    <div class="tri_box">
+                        <h6>Lorem Ipsum</h6>
+                        <p>super fancy one rule always be where with coconut</p>
+                    </div>
+                    <div class="tri_box">
+                        <h6>Lorem Ipsum</h6>
+                        <p>super fancy one rule always be where with coconut</p>
+                    </div>
+                    <div class="tri_box">
+                        <h6>Lorem Ipsum</h6>
+                        <p>super fancy one rule always be where with coconut</p>
+                    </div>
+                </div>
+                <div class="main_txt">
+                    <h3>Front-end<br/>Developer</h3>
+                </div>
+            </div>
         </div>
-        <div class="box">
-            <a href="./04_Deeperence/index.html">DEEPERENCE</a>
-            <a href="./05_VBLK/index.html">VBLK</a>
-            <a href="./06_Volvo/index.html">VOLVO</a>
-            <a href="./07_Fornasetti/index.html">FORNASETTI</a>
+
+        <div class="con con_1">
+            <a href="./01_sfu/login.html">
+                <div class="img_con">
+                    <img src="./img_1.png" alt="project_1">
+                </div>
+                <div class="txt_con">
+                    <h4>01.</h4>
+                    <p>sfu - Team Project</p>
+                    <p>Branding, Website</p>
+                </div>
+            </a>
         </div>
+        <div class="con con_2">
+            <a href="./02_JAJU/index.html">
+                <div class="txt_con">
+                    <h4>02.</h4>
+                    <p>JAJU </p>
+                    <p>Renewal, Mobile ver</p>
+                </div>
+                <div class="img_con">
+                    <img src="./img_2.png" alt="project_2">
+                </div>
+            </a>
+        </div>
+        <div class="con con_3">
+            <a href="./03_kick the hurdle/index.html">
+                <div class="img_con">
+                    <img src="./img_3.png" alt="project_3">
+                </div>
+                <div class="txt_con">
+                    <h4>03.</h4>
+                    <p>KICK THE HURDLE</p>
+                    <p>Renewal, Mobile ver</p>
+                </div>
+            </a>
+        </div>
+        <div class="con con_4">
+            <a href="./04_Deeperence/index.html">
+                <div class="txt_con">
+                    <h4>04.</h4>
+                    <p>Deeperence</p>
+                    <p>Website Renewal</p>
+                </div>
+                <div class="img_con">
+                    <img src="./img_4.png" alt="project_4">
+                </div>
+            </a>
+        </div>
+        <div class="con con_5">
+            <a href="./05_VBLK/index.html">
+                <div class="img_con">
+                    <img src="./img_5.png" alt="project_5">
+                </div>
+                <div class="txt_con">
+                    <h4>05.</h4>
+                    <p>VBLK</p>
+                    <p>Website Renewal</p>
+                </div>
+            </a>
+        </div>
+        <div class="con con_6">
+            <a href="./06_Volvo/index.html">
+                <div class="txt_con">
+                    <h4>06.</h4>
+                    <p>VOLVO</p>
+                    <p>Website Renewal</p>
+                </div>
+                <div class="img_con">
+                    <img src="./img_6.png" alt="project_6">
+                </div>
+            </a>
+        </div>
+        <div class="con con_7">
+            <a href="./07_Fornasetti/index.html">
+                <div class="img_con">
+                    <img src="./img_7.png" alt="project_7">
+                </div>
+                <div class="txt_con">
+                    <h4>07.</h4>
+                    <p>Fornasetti</p>
+                    <p>Website Renewal</p>
+                </div>
+            </a>
+        </div>
+
+        <footer>
+            <h6>wlefjw</h6>
+            <p>copyright Lindsey</p>
+        </footer>
+
     </div>
+
+
+
+
+    <script>
+
+        const sticks = document.querySelectorAll('.stick');
+        const wrapEl = document.querySelector('.wrap');
+        const gageEl = document.querySelector('.gage');
+
+        const handleScroll = () => {
+            let sct = window.pageYOffset;
+            gageEl.style.height = sct + 100 + 'px';
+            console.log(sct)
+
+            if(sct >= 6190) {
+                gageEl.style.opacity = '0';
+            } else if ( sct < 6190) {
+                gageEl.style.opacity = '1';
+            }
+        }
+        window.addEventListener('scroll', handleScroll);
+
+
+        setTimeout( function(){
+            document.querySelector('body').style.backgroundColor = '#000';
+            document.querySelector('body').style.color = '#fff';
+        },500);
+
+        // for ( i = 0; i < sticks.length; i++) {
+        //     setTimeout ( function(i){
+        //         sticks[i].classList.add('opacity');
+        //     },1000+(i*200));
+        // }
+        
+
+        setTimeout ( function(){
+            sticks[0].style.opacity='1';
+        },1500);
+        setTimeout ( function(){
+            sticks[1].style.opacity='1';
+        },1800);
+        setTimeout ( function(){
+            sticks[2].style.opacity='1';
+        },2100);
+        setTimeout ( function(){
+            sticks[3].style.opacity='1';
+        },2400);
+        setTimeout ( function(){
+            sticks[4].style.opacity='1';
+        },2700);
+        setTimeout ( function(){
+            sticks[5].style.opacity='1';
+        },3000);
+        setTimeout ( function(){
+            sticks[6].style.opacity='1';
+        },3300);
+        setTimeout ( function(){
+            sticks[7].style.opacity='1';
+        },3600);
+        setTimeout ( function(){
+            sticks[8].style.opacity='1';
+        },3900);
+
+    </script>
     
 </body>
 </html>
