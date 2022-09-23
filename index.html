@@ -18,6 +18,17 @@
             font-family: 'Noto Sans', sans-serif;
         }
 
+        #my-div {
+            width: 30px;
+            height: 30px;
+            background-color: orangered;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            transition: 0.05s ease-out;
+            z-index: 5;
+        }
+
         .wrap {
             position: relative;
             max-width: 1920px;
@@ -64,6 +75,7 @@
             font-size: 23px;
             font-weight: 800;
             margin-bottom: 15px;
+            margin-right: -100px;
         }
 
         .txt_box p {
@@ -81,6 +93,15 @@
 
         .tri_box {
             width: 15%;
+        }
+
+        .tri_box h6 {
+            font-size: 10px;
+            margin-bottom: 8px;
+        }
+
+        .tri_box p {
+            font-size: 16px;
         }
 
         .main_txt {
@@ -173,7 +194,7 @@
         }
 
         footer p {
-            font-size: 22px;
+            font-size: 18px;
         }
 
         .opacity {
@@ -182,7 +203,7 @@
 
         /* pc ver end */
 
-        @media screen and (max-width: 501px){
+        @media screen and (max-width: 500px){
             .wrap {
                 max-width: 500px;
                 margin: 80px auto;
@@ -243,6 +264,7 @@
             .con .img_con {
                 width: 100%;
                 height: 450px;
+                background-repeat: no-repeat;
                 background-position: center;
                 background-size: contain;
             }
@@ -310,6 +332,7 @@
 </head>
 <body>
 
+    <div id="my-div"></div>
     <div class="wrap">
         
         <div class="main">
@@ -335,16 +358,16 @@
             <div class="right">
                 <div class="tri_txt">
                     <div class="tri_box">
-                        <h6>Lorem Ipsum</h6>
-                        <p>super fancy one rule always be where with coconut</p>
+                        <h6>2021 - 2022</h6>
+                        <p>I'm ready to start a new chapter in my life.</p>
                     </div>
                     <div class="tri_box">
-                        <h6>Lorem Ipsum</h6>
-                        <p>super fancy one rule always be where with coconut</p>
+                        <h6>Web Design</h6>
+                        <p>Custom and always fully responsive website.</p>
                     </div>
                     <div class="tri_box">
-                        <h6>Lorem Ipsum</h6>
-                        <p>super fancy one rule always be where with coconut</p>
+                        <h6>Web Development</h6>
+                        <p>Hand crafted web development for pixel perfect results.</p>
                     </div>
                 </div>
                 <div class="main_txt">
@@ -439,8 +462,8 @@
         </div>
 
         <footer>
-            <h6>wlefjw</h6>
-            <p>copyright Lindsey</p>
+            <h6>Tel : 010.8696.9388</h6>
+            <p>Copyright ©Lindsey All rights reserved.</p>
         </footer>
 
     </div>
@@ -453,6 +476,7 @@
         const sticks = document.querySelectorAll('.stick');
         const wrapEl = document.querySelector('.wrap');
         const gageEl = document.querySelector('.gage');
+        let myDiv = document.getElementById("my-div");
 
         const handleScroll = () => {
             let sct = window.pageYOffset;
@@ -472,41 +496,60 @@
             document.querySelector('body').style.backgroundColor = '#000';
             document.querySelector('body').style.color = '#fff';
         },500);
-
-        // for ( i = 0; i < sticks.length; i++) {
-        //     setTimeout ( function(i){
-        //         sticks[i].classList.add('opacity');
-        //     },1000+(i*200));
-        // }
         
 
         setTimeout ( function(){
             sticks[0].style.opacity='1';
-        },1500);
+        },1100);
         setTimeout ( function(){
             sticks[1].style.opacity='1';
-        },1800);
+        },1200);
         setTimeout ( function(){
             sticks[2].style.opacity='1';
-        },2100);
+        },1300);
         setTimeout ( function(){
             sticks[3].style.opacity='1';
-        },2400);
+        },1400);
         setTimeout ( function(){
             sticks[4].style.opacity='1';
-        },2700);
+        },1500);
         setTimeout ( function(){
             sticks[5].style.opacity='1';
-        },3000);
+        },1600);
         setTimeout ( function(){
             sticks[6].style.opacity='1';
-        },3300);
+        },1700);
         setTimeout ( function(){
             sticks[7].style.opacity='1';
-        },3600);
+        },1800);
         setTimeout ( function(){
             sticks[8].style.opacity='1';
-        },3900);
+        },1900);
+
+        
+
+        function isTouchDevice() {
+        try {
+            document.createEvent("TouchEvent");
+            return true;
+        } catch (e) {
+            return false;
+        }
+        }
+        const move = (e) => {
+        try {
+            var x = !isTouchDevice() ? e.pageX : e.touches[0].pageX;
+            var y = !isTouchDevice() ? e.pageY : e.touches[0].pageY;
+        } catch (e) {}
+        myDiv.style.left = x - 15 + "px";
+        myDiv.style.top = y - 15 + "px";
+        };
+        document.addEventListener("mousemove", (e) => {
+        move(e);
+        });
+        document.addEventListener("touchmove", (e) => {
+        move(e);
+        });
 
     </script>
     
